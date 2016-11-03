@@ -1,0 +1,18 @@
+#
+# Copyright Daniel S. Berger (c) 2016.
+#
+#
+
+$Module cacheadmission VMOD
+
+DESCRIPTION
+===========
+
+This VMOD offers cache admission policies that shield
+Varnish from large unpopular objects (aka. one-hit-wonders)
+that push out other objects while not yielding any hits.
+
+$Event init_function
+$Function BOOL thlru(STRING)
+$Function BOOL explru(STRING)
+
